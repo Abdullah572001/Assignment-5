@@ -19,15 +19,17 @@
 </head>
 
 <body class="font-lexend">
-    <header class="sticky top-0">
-        <nav class="bg-slate-100 pb-12 mb-16">
-            <div class="lg:container lg:mx-auto lg:px-24 py-6 flex justify-between">
+    <header class="sticky top-0 bg-white">
+        <nav class="bg-slate-100 mb-16">
+            <div class="lg:container lg:mx-auto lg:px-24 py-6 flex justify-between px-4">
                 <div>
-                    <button class="btn bg-lime-400 text-lg font-semibold px-8">Blog</button>
+                    <button id="blog" class="btn bg-lime-400 text-lg font-semibold px-8">Blog</button>
                 </div>
                 <div class="flex justify-between w-56">
-                    <img class="max-w-10 max-h-10" src="./assets/logo.png" alt="">
-                    <h3 class="text-lg font-semibold flex items-center">Donate Bangladesh</h3>
+                    <img class="max-w-10 max-h-10 mx-auto" src="./assets/logo.png" alt="">
+                    <div class="flex items-center">
+                        <h3 class="text-lg font-semibold hidden lg:inline">Donate Bangladesh</h3>
+                    </div>
                 </div>
                 <div class="flex justify-evenly w-32">
                     <img class="max-w-7 max-h-7" src="./assets/coin.png" alt="">
@@ -36,13 +38,13 @@
             </div>
         </nav>
 
-        <section class="banner text-center">
+        <section class="banner text-center pb-6 px-4">
             <button class="btn text-lg font-semibold mr-2 px-7">Donation</button>
             <button class="btn text-lg font-medium text-gray-600 px-8">History</button>
         </section>
     </header>
 
-    <main class="lg:container lg:mx-auto lg:px-24 mt-6">
+    <main class="lg:container lg:mx-auto lg:px-24 mt-6 px-4">
         <section id="donation">
             <div class="grid lg:grid-cols-2 border rounded-2xl p-6 mb-6">
                 <div class="mb-6 lg:mb-0">
@@ -105,6 +107,8 @@
     <footer class="bg-slate-200">
         <div class="h-36"></div>
     </footer>
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
 </body>
 
 </html>
