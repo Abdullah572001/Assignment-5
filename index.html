@@ -19,7 +19,7 @@
 </head>
 
 <body class="font-lexend">
-    <header class="sticky top-0 bg-white">
+    <header class="sticky top-0 bg-white bg-opacity-60">
         <nav class="bg-slate-100 mb-16">
             <div class="lg:container lg:mx-auto lg:px-24 py-6 flex justify-between px-4">
                 <div>
@@ -54,7 +54,7 @@
                     <button class="bg-gray-200 px-4 py-2 rounded-md">
                         <div class="flex">
                             <img class="max-w-6 max-h-6" src="./assets/coin.png" alt="">
-                            <p><span id="noakhali-donation" class="mx-2">0</span>BDT</p>
+                            <p><span id="noakhali-donation" class="mx-2">100</span>BDT</p>
                         </div>
                     </button>
                     <h1 class="text-xl font-bold my-3">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -63,12 +63,11 @@
                         and to those affected by this disaster. Every contribution, big or small, makes difference.
                         Please join us in supporting the relief efforts and making a positive impact on the lives of
                         those in need.</p>
-                    <input id="noakhali-donation-amount" class="w-full border rounded-md px-6 py-3 my-3" type="text"
+                    <input id="noakhali-donation-amount" class="w-full border rounded-md px-6 py-3 my-3" type="number"
                         placeholder="Write Donation Amount">
 
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="donate-btn btn w-full text-center text-xl font-semibold bg-lime-300 my-3"
-                        onclick="my_modal_5.showModal()">Donate Now</button>
+                    <button id="donate-now-btn1" class="donate-btn btn w-full text-center text-xl font-semibold bg-lime-300 my-3">Donate Now</button>
                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                         <div class="modal-box text-center">
                             <h3 class="text-4xl font-bold">Congrates!</h3>
@@ -104,13 +103,12 @@
                         calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this
                         disaster. Every contribution counts towards making a real difference. Please consider donating
                         today to assist those in urgent need.</p>
-                    <input id="feni-donation-amount" class="w-full border rounded-md px-6 py-3 my-3" type="text"
+                    <input id="feni-donation-amount" class="w-full border rounded-md px-6 py-3 my-3" type="number"
                         placeholder="Write Donation Amount">
 
 
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="donate-btn btn w-full text-center text-xl font-semibold bg-lime-300 my-3"
-                        onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button class="donate-btn btn w-full text-center text-xl font-semibold bg-lime-300 my-3" id="donate-now-btn2">Donate Now</button>
                     <dialog id="my_modal_1" class="modal">
                         <div class="modal-box text-center">
                             <h3 class="text-4xl font-bold">Congrates!</h3>
@@ -170,7 +168,7 @@
             </div>
         </section>
 
-        <section id="history" class="hidden pb-72">
+        <section id="history" class="hidden pb-72 lg:container lg:mx-auto lg:px-24 mt-6">
         </section>
     </main>
 
