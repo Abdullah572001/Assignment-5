@@ -2,10 +2,9 @@
 
 
 
-const quotaDonation = getInnerText('quota-donation');
-const quotaDonationAmount = getInputValue('quota-donation-amount');
 
-// Noakhali Donation Funtion
+
+// Noakhali Donation Function
 document.getElementById('donate-now-btn1')
     .addEventListener('click', function () {
         const targetBalance = getInnerText('target-balance');
@@ -40,7 +39,7 @@ document.getElementById('donate-now-btn1')
 
         const p = document.createElement('p');
         p.innerText = `
-        ${noakhaliDonationAmount} Taka is Donate for Flood at Noakhali, Bangladesh
+        ${noakhaliDonationAmount} Taka is Donated For Flood at Noakhali, Bangladesh
         `;
         p.classList.add('text-2xl');
         p.classList.add('font-bold');
@@ -58,11 +57,14 @@ document.getElementById('donate-now-btn1')
         `
         document.getElementById('history-div').appendChild(pp);
 
+        const hr = document.createElement('hr');
+        document.getElementById('history-div').appendChild(hr);
+
 
         my_modal_5.showModal();
     })
 
-// Feni Donation Funtion
+// Feni Donation Function
 document.getElementById('donate-now-btn2')
     .addEventListener('click', function () {
         const targetBalance = getInnerText('target-balance');
@@ -85,7 +87,90 @@ document.getElementById('donate-now-btn2')
         const targetMinus = targetBalance - feniDonationAmount;
         document.getElementById('target-balance').innerText = targetMinus;
 
-        
+        const div = document.createElement('div');
+        div.classList.add('history');
+        div.classList.add('p-6');
+        div.classList.add('mb-10');
+        div.id = 'history-div';
+        document.getElementById('history').appendChild(div);
+
+        const p = document.createElement('p');
+        p.innerText = `
+        ${feniDonationAmount} Taka is Donated For Flood Relief in Feni,Bangladesh
+        `;
+        p.classList.add('text-2xl');
+        p.classList.add('font-bold');
+        document.getElementById('history-div').appendChild(p);
+
+        // time
+        const time = new Date().toLocaleString("en-US", { timeZone: 'Asia/Dhaka', timeStyle: 'full' });
+        // date
+        const date = new Date().toDateString();
+
+        const pp = document.createElement('p');
+        pp.innerText = `
+        Date : ${date}  ${time}
+        `
+        document.getElementById('history-div').appendChild(pp);
+
+        const hr = document.createElement('hr');
+        document.getElementById('history-div').appendChild(hr);
+
+        my_modal_5.showModal();
+    })
+
+// Quota Donation Function
+
+document.getElementById('donation-now-btn3')
+    .addEventListener('click', function () {
+        const targetBalance = getInnerText('target-balance');
+
+        const quotaDonation = getInnerText('quota-donation');
+        const quotaDonationAmount = getInputValue('quota-donation-amount');
+
+        if (quotaDonationAmount > targetBalance) {
+            alert('You do not have enough money');
+            return;
+        }
+        if (quotaDonationAmount <= 0) {
+            alert('Invalid Donation Amount');
+            return;
+        }
+
+        const quotaAdd = quotaDonation + quotaDonationAmount;
+        document.getElementById('quota-donation').innerText = quotaAdd;
+
+        const targetMinus = targetBalance - quotaDonationAmount;
+        document.getElementById('target-balance').innerText = targetMinus;
+
+        const div = document.createElement('div');
+        div.classList.add('history');
+        div.classList.add('p-6');
+        div.classList.add('mb-10');
+        div.id = 'history-div';
+        document.getElementById('history').appendChild(div);
+
+        const p = document.createElement('p');
+        p.innerText = `
+        ${quotaDonationAmount} Taka is Donated For Aid for Injured in the Quota Movement
+        `;
+        p.classList.add('text-2xl');
+        p.classList.add('font-bold');
+        document.getElementById('history-div').appendChild(p);
+
+        // time
+        const time = new Date().toLocaleString("en-US", { timeZone: 'Asia/Dhaka', timeStyle: 'full' });
+        // date
+        const date = new Date().toDateString();
+
+        const pp = document.createElement('p');
+        pp.innerText = `
+        Date : ${date}  ${time}
+        `
+        document.getElementById('history-div').appendChild(pp);
+
+        const hr = document.createElement('hr');
+        document.getElementById('history-div').appendChild(hr);
 
         my_modal_5.showModal();
     })
