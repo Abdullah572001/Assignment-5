@@ -22,6 +22,11 @@ document.getElementById('donate-now-btn1')
             return;
         }
 
+        if (noakhaliDonationAmount === ""){
+            alert('Invalid Donation Amount');
+            return;
+        }
+
         const noakhaliAdd = noakhaliDonation + noakhaliDonationAmount;
         document.getElementById('noakhali-donation').innerText = noakhaliAdd;
 
@@ -81,6 +86,11 @@ document.getElementById('donate-now-btn2')
             return;
         }
 
+        if (feniDonationAmount === ""){
+            alert('Invalid Donation Amount');
+            return;
+        }
+
         const feniAdd = feniDonation + feniDonationAmount;
         document.getElementById('feni-donation').innerText = feniAdd;
 
@@ -133,6 +143,10 @@ document.getElementById('donation-now-btn3')
             return;
         }
         if (quotaDonationAmount <= 0) {
+            alert('Invalid Donation Amount');
+            return;
+        }
+        if (quotaDonationAmount === ""){
             alert('Invalid Donation Amount');
             return;
         }
